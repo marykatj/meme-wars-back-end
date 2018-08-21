@@ -10,7 +10,7 @@
 #
 # It's strongly recommended that you check this file into your version control system.
 
-ActiveRecord::Schema.define(version: 2018_08_16_165826) do
+ActiveRecord::Schema.define(version: 2018_08_21_223113) do
 
   create_table "memes", force: :cascade do |t|
     t.string "image"
@@ -18,6 +18,9 @@ ActiveRecord::Schema.define(version: 2018_08_16_165826) do
     t.integer "user_id"
     t.datetime "created_at", null: false
     t.datetime "updated_at", null: false
+    t.string "website"
+    t.string "api_id"
+    t.integer "score"
     t.index ["user_id"], name: "index_memes_on_user_id"
   end
 
