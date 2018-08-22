@@ -1,3 +1,5 @@
 class MemeSerializer < ActiveModel::Serializer
-  attributes :id
+  attributes :id, :image, :caption, :website, :api_id, :score
+
+  belongs_to :user
 end

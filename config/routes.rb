@@ -1,8 +1,10 @@
 Rails.application.routes.draw do  ##'Rails'.application.routes.draw should show up as yellow?
-
-    resources :memes, only: [:index, :create, :update, :destroy]
-    resources :users, only: [:create]   # dont need :new, since no view?
-
+  namespace :api do
+    namespace :v1 do
+      resources :memes
+      resources :users   # dont need :new, since no view?
+    end
+  end
 end
 
 #visit: http://localhost:3000/api/v1/memes.json
